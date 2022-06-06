@@ -1,7 +1,9 @@
+import 'package:flutter_ocupacion/Page/RowOcupacion.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_ocupacion/Page/registroOcupacion.dart';
 
 class ListaOcupacion extends StatelessWidget {
-  // const ListaOcupacion({super.key})
+  const ListaOcupacion({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -9,13 +11,15 @@ class ListaOcupacion extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Lista Ocupacion'),
       ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: const Text('hola ya si'),
-        ),
+      body: RowOcupacion(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => RegistroOcupacion()),
+          );
+        },
+        child: const Icon(Icons.add),
       ),
     );
   }
