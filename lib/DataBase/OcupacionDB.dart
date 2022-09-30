@@ -49,11 +49,13 @@ class OcupacionDb {
         await database.query("Ocupaciones");
 
     return List.generate(
-        listOcupacion.length,
-        (i) => Ocupacion(
-            idOcupacion: listOcupacion[i]['idOcupacion'],
-            descripcion: listOcupacion[i]['descripcion'],
-            salario: listOcupacion[i]['salario'],
-            fechaRegistro: listOcupacion[i]['fechaRegistro']));
+      listOcupacion.length,
+      (i) => Ocupacion(
+        idOcupacion: listOcupacion[i]['idOcupacion'],
+        descripcion: listOcupacion[i]['descripcion'],
+        salario: listOcupacion[i]['salario'],
+        fechaRegistro: listOcupacion[i]['fechaRegistro'],
+      ),
+    );
   }
 }

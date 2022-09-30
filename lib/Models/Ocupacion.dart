@@ -7,7 +7,7 @@ class Ocupacion {
   String fechaRegistro;
 
   Ocupacion(
-      {this.idOcupacion = null,
+      {this.idOcupacion = 0,
       this.descripcion = "",
       this.salario = 0.0,
       this.fechaRegistro = ""});
